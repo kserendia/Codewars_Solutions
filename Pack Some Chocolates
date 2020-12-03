@@ -30,8 +30,18 @@ make_chocolates (2, 1, 7) => 1
 make_chocolates (3, 1, 6) => 3  
 
 
-Solution:
+Solution #1:
+function makeChocolates(small, big, goal) {
+  for (let s = 0; s<=small; s++){
+    for (let b = 0; b<=big; b++){
+      if (b * 5 + s * 2 === goal) return s;
+    }
+  }
+  return -1
+}
 
+
+Solution #2:
 function makeChocolates(small, big, goal) {
 let BIG_WEIGTH = 5;
 let SMALL_WEIGTH = 2;

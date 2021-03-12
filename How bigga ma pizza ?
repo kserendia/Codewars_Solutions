@@ -1,0 +1,32 @@
+https://www.codewars.com/kata/5e9c06f95ea5b30033903194/train/javascript
+
+Welcome to ma pizza shop!
+I hava the bigga spherical blob of dough.
+And I wanna squisha ma dough to a circle to maka ma famous pizza base!
+You just choosa the "crispy" crust or the "thick" crust.
+So, how bigga ma pizza gonna be?
+Input
+blob = my dough blob diameter
+crust = "crispy" or "thick"
+Output
+Pizza radius
+Notes
+All data is valid
+Blob diameter is >= 0
+Input/Output units are same
+The "crispy" crust pizzas are 1 unit deep
+The "thick" crust pizzas are 5 units deep
+Near enough is good enough. If your answer is correct withn 0.001 then the test should pass.
+
+Solution:
+function howBiggaMaPizza(blob, crust) {
+  let radius = blob / 2;
+  let volume = (4 /3) * Math.PI * Math.pow(radius, 3);
+  let r;
+  if (crust === 'crispy'){
+    r = Math.sqrt(volume / Math.PI * 1);
+  }else {
+    r = Math.sqrt(volume / (Math.PI * 5));
+  }
+  return r;
+}

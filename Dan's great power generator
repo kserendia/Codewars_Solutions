@@ -1,0 +1,16 @@
+https://www.codewars.com/kata/582c42e0f000e54a7d000086/train/javascript
+
+Dan likes to find the nth power of number. But he doesn't like it when the result is odd!
+
+Return the nth power of each number, unless the result is odd, in which case round the result to the nearest 10.
+
+Eg. if number = 7, and power = 2, result = 50.
+
+
+Solution:
+
+function danspower(num, power) {
+  let result = Math.pow (num, power);
+  if (result % 2 != 0) return Math.round(result / 10 ) * 10;
+  else return result;
+}
